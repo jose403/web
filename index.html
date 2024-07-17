@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mensaje para ti amor  </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(amor.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            background-color: #ff6699;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #ff3366;
+        }
+        .message {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Amor</h1>
+        <p class="message" id="message">Haz clic en el botón para ti mi amor .</p>
+        <button class="button" onclick="mostrarMensaje()">Mostrar Mensaje</button>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            const mensajes = [
+                "Te amo más de lo que las palabras pueden expresar.",
+                "Eres mi persona favorita en todo el mundo.",
+                "Contigo, cada día es especial.",
+                "Mi corazón es tuyo para siempre.",
+                "Gracias por ser mi amor y mi mejor amigo/a."
+            ];
+            const mensajeAleatorio = mensajes[Math.floor(Math.random() * mensajes.length)];
+            document.getElementById("message").textContent = mensajeAleatorio;
+        }
+    </script>
+</body>
+</html>
